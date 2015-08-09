@@ -31,30 +31,25 @@ z-index: 9997;
   margin-top: -75px;
   text-align: center;
 }
-
 #arrow_right {
   display: inline-block;
   width: 67px;
   height: 109px;
-	-webkit-animation: arrow_right 1.5s infinite;
-
+  -webkit-animation: arrow_right 1.5s infinite;
 }
 @-webkit-keyframes arrow_right {
-	/*0% {
-		-webkit-transform: rotate(0deg) ;
-		opacity: 0;
-	}*/
-	50% {
-		-webkit-transform: rotate(90deg) ;
+	0%, 25% {
+		-webkit-transform: rotate(0deg) translateZ(0);
 		opacity: 1;
 	}
-
-
+        50%, 75% {
+		-webkit-transform: rotateZ(90deg) translateZ(0);
+		opacity: 1;
+	}
 }
-
 .mod-orient-layer__desc {
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 18px;
   color: #fff;
 }
     </style>
