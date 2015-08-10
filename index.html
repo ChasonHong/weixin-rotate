@@ -1,43 +1,50 @@
 ﻿<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>极速300M的网络到了</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <style media="screen">
-    @media screen and (orientation: landscape){
-    #orientLayer {
-    display: block;
-    }
-  }
-  .mod-orient-layer {
-display: none;
-position: fixed;
-height: 100%;
-width: 100%;
-left: 0;
-top: 0;
-right: 0;
-bottom: 0;
-background: #000;
-z-index: 9997;
+<meta charset="UTF-8">
+<title>css3判断手机横竖屏</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta name="format-detection" content="telephone=no">
+<style media="screen">
+html, body {
+  height:100%;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	font-family: 'Microsoft YaHei', 'WenQuanYi Zen Hei';
 }
-.mod-orient-layer__content {
+@media screen and (orientation: landscape){
+  #orientLayer {
+    display: block;
+  }
+}
+.mod-orient-layer {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 9997;
+}
+.mod-orient-layer-content {
   position: absolute;
   width: 100%;
   top: 45%;
   margin-top: -75px;
   text-align: center;
 }
-#arrow_right {
+#arrow-right {
   display: inline-block;
   width: 67px;
   height: 109px;
-  -webkit-animation: arrow_right 1.5s infinite;
+  -webkit-animation: arrow-right 1.5s infinite;
 }
-@-webkit-keyframes arrow_right {
+@-webkit-keyframes arrow-right {
 	0%, 25% {
 		-webkit-transform: rotate(0deg) translateZ(0);
 		opacity: 1;
@@ -47,21 +54,21 @@ z-index: 9997;
 		opacity: 1;
 	}
 }
-.mod-orient-layer__desc {
+.mod-orient-layer-desc {
   margin-top: 20px;
   font-size: 18px;
   color: #fff;
 }
-    </style>
+</style>
 </head>
 <body>
 
-  <div id="orientLayer" class="mod-orient-layer">
-      <div class="mod-orient-layer__content">
-        <img id="arrow_right" src="iph.png" alt="" />
-        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
-      </div>
+<div id="orientLayer" class="mod-orient-layer">
+  <div class="mod-orient-layer-content">
+    <img id="arrow-right" src="iph.png" alt="" />
+    <div class="mod-orient-layer-desc">为了更好的体验，请使用竖屏浏览</div>
   </div>
+</div>
 
 </body>
 
